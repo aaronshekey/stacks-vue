@@ -1,6 +1,16 @@
 <template>
   <div id="app">
-    <Question v-for="item of items" :key="item.question_id" :title=item.title :view_count=item.view_count :vote_count=item.score :answer_count=item.answer_count :url=item.link :profile_url=item.owner.link :profile_image=item.owner.profile_image :display_name=item.owner.display_name />
+    <Question v-for="item of items" :key="item.question_id"
+      :title=item.title
+      :view_count=item.view_count
+      :vote_count=item.score
+      :answer_count=item.answer_count
+      :url=item.link
+      :profile_url=item.owner.link
+      :profile_image=item.owner.profile_image
+      :display_name=item.owner.display_name
+      :is_answered=item.is_answered
+    />
   </div>
 </template>
 
