@@ -18,7 +18,7 @@
     </div>
     <div class="grid--cell fl1 sm:w100">
       <a v-bind:href=url class="s-link fs-subheading d-inline-block mb4 sm:mb2">{{ title }}</a>
-      <p class="v-truncate2 mb8">{{ body }}</p>
+      <p class="v-truncate2 mb8" v-if="body !== undefined">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
         <a class="grid--cell s-tag" href="#">git</a>
         <a class="grid--cell s-tag" href="#">version-control</a>
