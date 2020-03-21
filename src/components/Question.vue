@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="grid--cell fl1 sm:w100">
-      <a href="#" class="s-link fs-subheading d-inline-block mb4">{{ title }}</a>
+      <a href="#" class="s-link fs-subheading d-inline-block mb4 sm:mb2">{{ title }}</a>
       <p class="v-truncate2 mb8">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
         <a class="grid--cell s-tag" href="#">git</a>
