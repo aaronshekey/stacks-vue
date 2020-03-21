@@ -1,20 +1,18 @@
 <template>
   <div class="grid ai-center p16 sm:fd-column sm:ai-start bb bc-black-2">
-    <div class="grid--cell ws2 mr16 sm:mb8">
-      <div style="width:170px">
-        <div class="grid gs8 jc-center sm:jc-start">
-          <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:p0">
-            <div class="grid--cell fs-body3 sm:mr4">0</div>
-            <div class="grid--cell fs-fine">votes</div>
-          </div>
-          <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:pt2 sm:pb2 sm:pl6 sm:pr6">
-            <div class="grid--cell fs-body3 sm:mr4">0</div>
-            <div class="grid--cell fs-fine">answers</div>
-          </div>
-          <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:p0">
-            <div class="grid--cell fs-body3 sm:mr4">0</div>
-            <div class="grid--cell fs-fine">views</div>
-          </div>
+    <div class="grid--cell fl-shrink0 ws2 mr16 sm:mb8">
+      <div class="grid gs8 jc-center sm:jc-start">
+        <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:p0">
+          <div class="grid--cell fs-body3 sm:mr4">0</div>
+          <div class="grid--cell fs-fine">votes</div>
+        </div>
+        <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:pt2 sm:pb2 sm:pl6 sm:pr6">
+          <div class="grid--cell fs-body3 sm:mr4">0</div>
+          <div class="grid--cell fs-fine">answers</div>
+        </div>
+        <div class="grid fd-column ai-center fc-light px12 py6 sm:fd-row sm:p0">
+          <div class="grid--cell fs-body3 sm:mr4">0</div>
+          <div class="grid--cell fs-fine">views</div>
         </div>
       </div>
     </div>
