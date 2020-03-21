@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Question v-for="item of items" :key="item.question_id" :title=item.title />
+    <Question v-for="item of items" :key="item.question_id" :title=item.title :view_count=item.view_count :vote_count=item.score :answer_count=item.answer_count :url=item.link />
   </div>
 </template>
 
