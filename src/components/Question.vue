@@ -26,9 +26,9 @@
         <a class="grid--cell s-tag" href="#">undo</a>
         <a class="grid--cell s-tag" href="#">pre-commit</a>
         <div class="grid ai-center fc-light ml-auto pl12">
-          <a class="grid ai-center mr4" href="#">
-            <img class="bar-sm d-block mr4" src="https://via.placeholder.com/16">
-              GManNickG
+          <a class="grid ai-center mr4" :href=profile_url>
+            <img class="bar-sm d-block mr4 w16 h16" :src=profile_image>
+              {{ display_name }}
           </a>
           answered 3 mins ago
         </div>
@@ -43,10 +43,13 @@ export default {
   props: {
     title: String,
     body: String,
-    view_count: String,
-    answer_count: String,
-    vote_count: String,
-    url: String
+    view_count: Number,
+    answer_count: Number,
+    vote_count: Number,
+    url: String,
+    profile_image: String,
+    display_name: String,
+    profile_url: String
   }
 }
 </script>
