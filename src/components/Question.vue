@@ -47,11 +47,7 @@
       <a v-html="title" v-bind:href=url class="s-link fs-subheading d-inline-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
       <p class="v-truncate2 mb8" v-if="hasBody">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
-        <a class="grid--cell s-tag" href="#">git</a>
-        <a class="grid--cell s-tag" href="#">version-control</a>
-        <a class="grid--cell s-tag" href="#">git-commit</a>
-        <a class="grid--cell s-tag" href="#">undo</a>
-        <a class="grid--cell s-tag" href="#">pre-commit</a>
+        <a class="grid--cell s-tag" v-for="tag of tags" :key="tag">{{ tag }}</a>
         <div class="grid ai-center fc-light ml-auto pl12">
           <a class="grid ai-center mr4" v-bind:href=profile_url>
             <img class="bar-sm d-block mr4 w16 h16" v-bind:src=profile_image>
@@ -77,7 +73,8 @@ export default {
     profile_image: String,
     display_name: String,
     profile_url: String,
-    is_answered: Boolean
+    is_answered: Boolean,
+    tags: Array
   },
   computed: {
     hasBody: function () {

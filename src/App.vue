@@ -10,6 +10,7 @@
       :profile_image=item.owner.profile_image
       :display_name=item.owner.display_name
       :is_answered=item.is_answered
+      :tags=item.tags
     />
   </div>
 </template>
