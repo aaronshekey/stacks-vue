@@ -44,7 +44,9 @@
       </div>
     </div>
     <div class="grid--cell fl1 sm:w100">
-      <a v-bind:href=url class="s-link fs-subheading d-inline-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }">{{ title }}</a>
+      <a v-bind:href=url class="s-link fs-subheading d-inline-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }">
+        <span v-html="title"></span>
+      </a>
       <p class="v-truncate2 mb8" v-if="hasBody">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
         <a class="grid--cell s-tag" href="#">git</a>
