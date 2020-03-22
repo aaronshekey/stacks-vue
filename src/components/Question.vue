@@ -1,6 +1,6 @@
 <template>
   <div class="grid ai-center p16 sm:fd-column sm:ai-start bb bc-black-2">
-    <div class="grid--cell fl-shrink0 ws2 mr16 sm:mb8">
+    <div class="grid--cell fl-shrink0 mr16 sm:mb8">
       <div class="grid gs8 jc-center sm:jc-start fc-light">
         <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0 w48 sm:w-auto">
           <div class="grid--cell fs-body3 sm:mr2">
