@@ -43,8 +43,8 @@
         </div>
       </div>
     </div>
-    <div class="grid--cell fl1 sm:w100">
-      <a v-html="title" v-bind:href=url class="wb-break-all s-link fs-subheading d-inline-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
+    <div class="grid--cell fl-grow1 sm:w100 wmn0">
+      <a v-html="title" v-bind:href=url class="ow-break-word s-link fs-subheading d-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
       <p class="v-truncate2 mb8" v-if="hasBody">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
         <a class="grid--cell s-tag" v-for="tag of tags" :key="tag">{{ tag }}</a>
