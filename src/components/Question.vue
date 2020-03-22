@@ -51,7 +51,7 @@
         <div class="grid ai-center fc-light ml-auto pl12">
           <a class="grid ai-center mr4" v-bind:href=profile_url>
             <img class="bar-sm d-block mr4 w16 h16" v-bind:src=profile_image>
-              {{ display_name }}
+              <span v-html="display_name"></span>
           </a>
           <timeago :datetime=convertedDate :auto-update="60"></timeago>
         </div>
