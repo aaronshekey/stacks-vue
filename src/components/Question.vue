@@ -2,8 +2,8 @@
   <div class="grid ai-center p16 sm:fd-column sm:ai-start bb bc-black-2">
     <div class="grid--cell fl-shrink0 ws2 mr16 sm:mb8">
       <div class="grid gs8 jc-center sm:jc-start fc-light">
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0">
-          <div class="grid--cell fs-body3 sm:mr4">
+        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0 w48 sm:w-auto">
+          <div class="grid--cell fs-body3 sm:mr2">
             {{ abbreviatedVoteCount }}
           </div>
           <div class="grid--cell fs-fine">
@@ -15,8 +15,8 @@
             </span>
           </div>
         </div>
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:pt2 sm:pb2 sm:pl6 sm:pr6 bar-sm" v-bind:class="{ 'bg-green-500 fc-white bc-transparent': is_answered, 'ba bc-green-2 fc-green-500': hasAnswers }">
-          <div class="grid--cell fs-body3 sm:mr4">
+        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:pt2 sm:pb2 sm:pl6 sm:pr6 bar-sm w64 sm:w-auto" v-bind:class="{ 'bg-green-500 fc-white bc-transparent': is_answered, 'ba bc-green-2 fc-green-500': hasAnswers }">
+          <div class="grid--cell fs-body3 sm:mr2">
             {{ abbreviatedAnswerCount }}
           </div>
           <div class="grid--cell fs-fine">
@@ -28,8 +28,8 @@
             </span>
           </div>
         </div>
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0">
-          <div class="grid--cell fs-body3 sm:mr4">
+        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0 w48 sm:w-auto">
+          <div class="grid--cell fs-body3 sm:mr2">
             {{ abbreviatedViewCount }}
           </div>
           <div class="grid--cell fs-fine">
