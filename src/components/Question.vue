@@ -53,7 +53,7 @@
             <img class="bar-sm d-block mr4 w16 h16" v-bind:src=profile_image>
               {{ display_name }}
           </a>
-          answered 3 mins ago
+          <timeago :datetime=convertedDate :auto-update="60"></timeago>
         </div>
       </div>
     </div>
@@ -74,7 +74,8 @@ export default {
     display_name: String,
     profile_url: String,
     is_answered: Boolean,
-    tags: Array
+    tags: Array,
+    last_activity_date: Number
   },
   computed: {
     hasBody: function () {
@@ -99,6 +100,9 @@ export default {
     },
     abbreviatedVoteCount: function () {
       return abbreviateNumber(this.vote_count, 0)
+    },
+    convertedDate: function () {
+      return Date(this.last_activity_date * 1000)
     }
   }
 }

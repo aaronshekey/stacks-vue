@@ -11,6 +11,7 @@
       :display_name=item.owner.display_name
       :is_answered=item.is_answered
       :tags=item.tags
+      :last_activity_date=item.last_activity_date
     />
   </div>
 </template>
