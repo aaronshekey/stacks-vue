@@ -1,50 +1,36 @@
 <template>
-  <div class="grid ai-center p16 sm:fd-column sm:ai-start bb bc-black-2">
-    <div class="grid--cell fl-shrink0 mr16 sm:mb8">
-      <div class="grid gs8 jc-center sm:jc-start fc-light">
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0 w48 sm:w-auto">
-          <div class="grid--cell fs-body3 sm:mr2">
-            {{ abbreviatedVoteCount }}
-          </div>
-          <div class="grid--cell fs-fine">
-            <span v-if="vote_count === 1 || vote_count === -1">
-              vote
-            </span>
-            <span v-else>
-              votes
-            </span>
-          </div>
-        </div>
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:pt2 sm:pb2 sm:pl6 sm:pr6 bar-sm w64 sm:w-auto" v-bind:class="{ 'bg-green-500 fc-white bc-transparent': is_answered, 'ba bc-green-2 fc-green-500': hasAnswers }">
-          <div class="grid--cell fs-body3 sm:mr2">
-            {{ abbreviatedAnswerCount }}
-          </div>
-          <div class="grid--cell fs-fine">
-            <span v-if="answer_count === 1">
-              answer
-            </span>
-            <span v-else>
-              answers
-            </span>
-          </div>
-        </div>
-        <div class="grid fd-column ai-center px12 py6 sm:fd-row sm:p0 w48 sm:w-auto">
-          <div class="grid--cell fs-body3 sm:mr2">
-            {{ abbreviatedViewCount }}
-          </div>
-          <div class="grid--cell fs-fine">
-            <span v-if="view_count === 1">
-              view
-            </span>
-            <span v-else>
-              views
-            </span>
-          </div>
-        </div>
+  <div class="grid ai-center p16 sm:fd-column ai-start bb bc-black-2">
+    <div class="grid gs8 fd-column sm:fd-row fl-shrink0 mr16 ai-end sm:ai-center sm:mb4 fs-caption fc-light">
+      <div class="grid--cell py2" v-bind:class="{ 'px4 bar-sm bg-green-500 fc-white bc-transparent': is_answered, 'px4 bar-sm ba bc-green-3 fc-green-600': hasAnswers }">
+        {{ abbreviatedAnswerCount }}
+        <span v-if="answer_count === 1">
+          answer
+        </span>
+        <span v-else>
+          answers
+        </span>
+      </div>
+      <div class="grid--cell">
+        {{ abbreviatedVoteCount }}
+        <span v-if="vote_count === 1 || vote_count === -1">
+          vote
+        </span>
+        <span v-else>
+          votes
+        </span>
+      </div>
+      <div class="grid--cell">
+        {{ abbreviatedViewCount }}
+        <span v-if="view_count === 1">
+          view
+        </span>
+        <span v-else>
+          views
+        </span>
       </div>
     </div>
     <div class="grid--cell fl-grow1 sm:w100 wmn0">
-      <a v-html="title" v-bind:href=url class="ow-break-word s-link fs-subheading d-block mb4 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
+      <a v-html="title" v-bind:href=url class="ow-break-word s-link fs-subheading d-block mb4 mtn2 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
       <p class="v-truncate2 mb8" v-if="hasBody">{{ body }}</p>
       <div class="grid gs4 ai-center fw-wrap">
         <a class="grid--cell s-tag" v-for="tag of tags" :key="tag">{{ tag }}</a>
