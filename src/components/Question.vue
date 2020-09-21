@@ -1,6 +1,6 @@
 <template>
   <div class="grid ai-center p16 sm:fd-column ai-start bb bc-black-2">
-    <div class="grid gs8 fd-column sm:fd-row fl-shrink0 mr16 ai-end sm:ai-center sm:mb4 fs-caption fc-light">
+    <div class="wmn1 grid gs8 fd-column sm:fd-row fl-shrink0 mr16 ai-end sm:ai-center sm:mb4 fs-caption fc-light">
       <div class="grid--cell py2" v-bind:class="{ 'px4 bar-sm bg-green-500 fc-white bc-transparent': is_answered, 'px4 bar-sm ba bc-green-3 fc-green-600': hasAnswers }">
         <span v-if="is_answered">
           <svg aria-hidden="true" class="svg-icon iconCheckmarkSm va-text-bottom" width="14" height="14" viewBox="0 0 14 14"><path d="M13 3.41L11.59 2 5 8.59 2.41 6 1 7.41l4 4 8-8z"></path></svg>
