@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Post-Summary v-for="item of items" :key="item.question_id"
+    <PostSummary v-for="item of items" :key="item.question_id"
       :title=item.title
       :view_count=item.view_count
       :vote_count=item.score
@@ -18,12 +18,12 @@
 
 <script>
 import axios from 'axios'
-import Question from './components/Post-Summary.vue'
+import PostSummary from './components/Post-Summary.vue'
 
 export default {
   name: 'App',
   components: {
-    Question
+    PostSummary
   },
   data () {
     return {
