@@ -1,7 +1,7 @@
 <template>
-  <div class="grid ai-center p16 sm:fd-column ai-start bb bc-black-2">
-    <div class="wmn1 grid gs8 fd-column sm:fd-row fl-shrink0 mr16 ai-end sm:ai-center sm:mb4 fs-caption fc-light">
-      <div class="grid--cell py2" v-bind:class="{ 'px4 bar-sm bg-green-500 fc-white bc-transparent': is_answered, 'px4 bar-sm ba bc-green-3 fc-green-600': hasAnswers }">
+  <div class="d-flex ai-center p16 sm:fd-column ai-start bb bc-black-2">
+    <div class="wmn1 d-flex gs8 fd-column sm:fd-row fl-shrink0 mr16 ai-end sm:ai-center sm:mb4 fs-caption fc-light">
+      <div class="flex--item py2" v-bind:class="{ 'px4 bar-sm bg-green-500 fc-white bc-transparent': is_answered, 'px4 bar-sm ba bc-green-3 fc-green-600': hasAnswers }">
         <span v-if="is_answered">
           <svg aria-hidden="true" class="svg-icon iconCheckmarkSm va-text-bottom" width="14" height="14" viewBox="0 0 14 14"><path d="M13 3.41L11.59 2 5 8.59 2.41 6 1 7.41l4 4 8-8z"></path></svg>
         </span>
@@ -13,7 +13,7 @@
           answers
         </span>
       </div>
-      <div class="grid--cell">
+      <div class="flex--item">
         {{ abbreviatedVoteCount }}
         <span v-if="vote_count === 1 || vote_count === -1">
           vote
@@ -22,7 +22,7 @@
           votes
         </span>
       </div>
-      <div class="grid--cell">
+      <div class="flex--item">
         {{ abbreviatedViewCount }}
         <span v-if="view_count === 1">
           view
@@ -32,13 +32,13 @@
         </span>
       </div>
     </div>
-    <div class="grid--cell fl-grow1 sm:w100 wmn0">
+    <div class="flex--item fl-grow1 sm:w100 wmn0">
       <a v-html="title" v-bind:href=url class="ow-break-word s-link fs-subheading d-block mb4 mtn2 sm:mb8" v-bind:class="{ 'sm:mb2': hasBody }"></a>
       <p class="v-truncate2 mb8" v-if="hasBody">{{ body }}</p>
-      <div class="grid gs4 ai-center fw-wrap">
-        <a class="grid--cell s-tag" v-for="tag of tags" :key="tag">{{ tag }}</a>
-        <div class="grid ai-center fc-light ml-auto pl12">
-          <a class="grid ai-center mr4" v-bind:href=profile_url>
+      <div class="d-flex gs4 ai-center fw-wrap">
+        <a class="flex--item s-tag" v-for="tag of tags" :key="tag">{{ tag }}</a>
+        <div class="d-flex ai-center fc-light ml-auto pl12">
+          <a class="d-flex ai-center mr4" v-bind:href=profile_url>
             <img class="bar-sm d-block mr4 w16 h16" v-bind:src=profile_image>
               <span v-html="display_name"></span>
           </a>

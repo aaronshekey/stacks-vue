@@ -18,7 +18,7 @@
 
 <script>
 import axios from 'axios'
-import Question from './components/Question.vue'
+import Question from './components/Post-Summary.vue'
 
 export default {
   name: 'App',
