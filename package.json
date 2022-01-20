@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@stackoverflow/stacks": "^0.55.5",
+    "@stackoverflow/stacks": "^0.73.1",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.12",
