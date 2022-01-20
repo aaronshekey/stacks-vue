@@ -44,9 +44,9 @@
             <img class="s-avatar--image" v-bind:src=profile_image />
           </a>
           <a class="s-user-card--link" v-html="display_name" v-bind:href=profile_url></a>
-          <!-- <ul class="s-user-card--awards">
-            <li class="s-user-card--rep">…</li>
-          </ul> -->
+          <ul class="s-user-card--awards">
+            <li class="s-user-card--rep">{{ reputation }}</li>
+          </ul>
           <timeago class="s-user-card--time" :datetime=convertedDate :auto-update="60"></timeago>
         </div>
       </div>
@@ -67,6 +67,7 @@ export default {
     profile_image: String,
     display_name: String,
     profile_url: String,
+    reputation: String,
     is_answered: Boolean,
     tags: Array,
     last_activity_date: Number

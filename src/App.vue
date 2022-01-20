@@ -8,6 +8,7 @@
       :url=item.link
       :profile_url=item.owner.link
       :profile_image=item.owner.profile_image
+      :reputation=item.owner.reputation
       :display_name=item.owner.display_name
       :is_answered=item.is_answered
       :tags=item.tags
