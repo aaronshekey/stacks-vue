@@ -21,7 +21,7 @@
 
 <script>
 import axios from 'axios'
-import PostSummary from './components/Post-Summary.vue'
+import PostSummary from './components/PostSummary.vue'
 
 export default {
   name: 'App',
