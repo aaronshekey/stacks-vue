@@ -45,9 +45,12 @@
           </a>
           <a class="s-user-card--link" v-html="display_name" v-bind:href=profile_url></a>
           <ul class="s-user-card--awards">
-            <li class="s-user-card--rep">{{ reputation }}</li>
+            <li class="s-user-card--rep">{{ abbreviatedReputation }}</li>
           </ul>
-          <timeago class="s-user-card--time" :datetime=convertedDate :auto-update="60"></timeago>
+          <div class="s-user-card--time">
+            asked
+            <timeago :datetime=convertedDate :auto-update="60"></timeago>
+          </div>
         </div>
       </div>
     </div>
@@ -67,7 +70,7 @@ export default {
     profile_image: String,
     display_name: String,
     profile_url: String,
-    reputation: String,
+    reputation: Number,
     is_answered: Boolean,
     tags: Array,
     last_activity_date: Number
@@ -95,6 +98,9 @@ export default {
     },
     abbreviatedVoteCount: function () {
       return abbreviateNumber(this.vote_count, 0)
+    },
+    abbreviatedReputation: function () {
+      return abbreviateNumber(this.reputation, 0)
     },
     convertedDate: function () {
       return Date(this.last_activity_date * 1000)
