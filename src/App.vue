@@ -1,29 +1,32 @@
 <template>
   <div id="app">
-    <Question v-for="item of items" :key="item.question_id"
-      :title=item.title
-      :view_count=item.view_count
-      :vote_count=item.score
-      :answer_count=item.answer_count
-      :url=item.link
-      :profile_url=item.owner.link
-      :profile_image=item.owner.profile_image
-      :display_name=item.owner.display_name
-      :is_answered=item.is_answered
-      :tags=item.tags
-      :last_activity_date=item.last_activity_date
-    />
+    <div class="bar-lg bg-white bs-md mx-auto wmx8">
+      <PostSummary v-for="item of items" :key="item.question_id"
+        :title=item.title
+        :view_count=item.view_count
+        :vote_count=item.score
+        :answer_count=item.answer_count
+        :url=item.link
+        :profile_url=item.owner.link
+        :profile_image=item.owner.profile_image
+        :reputation=item.owner.reputation
+        :display_name=item.owner.display_name
+        :is_answered=item.is_answered
+        :tags=item.tags
+        :last_activity_date=item.last_activity_date
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Question from './components/Question.vue'
+import PostSummary from './components/PostSummary.vue'
 
 export default {
   name: 'App',
   components: {
-    Question
+    PostSummary
   },
   data () {
     return {
